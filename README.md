@@ -6,19 +6,21 @@ Projeto desenvolvido para a disciplina de **Linguagens de Programação 2**, con
 
 O projeto implementa e demonstra os seguintes pilares de desenvolvimento:
 
-- **Abstração e Herança**: Utilização de classes abstratas para a definição de modelos base de itens e inimigos.
-- **Polimorfismo**: Implementação de comportamentos específicos em subclasses através de sobrescrita de métodos.
-- **Interfaces**: Definição de contratos de comportamento (ex: `Usavel`) para diferentes tipos de itens.
-- **Encapsulamento**: Controle de acesso rigoroso aos atributos para garantir a integridade dos dados.
-- **Collections Framework**: Gerenciamento dinâmico de inventários e listas utilizando `ArrayList`.
+- **Abstração e Herança**: Utilização de classes abstratas (`Inimigo`, `Item`) para a definição de modelos base.
+- **Polimorfismo**: Comportamentos de ataque específicos para `Goblin` e `Esqueleto` via sobrescrita de métodos.
+- **Interfaces**: Interface `Usavel` para implementar a lógica de consumo de poções.
+- **Encapsulamento**: Proteção de estado do personagem e inimigos com modificadores de acesso e métodos de controle (`receberDano`, `curar`).
+- **Collections Framework**: Uso de `ArrayList` para inventário e `HashMap` para gerenciamento de missões.
+- **Generics**: Implementação de uma classe `Inventario<T>` genérica para suportar diferentes tipos de itens.
+- **Tratamento de Exceções**: Criação de exceção personalizada `ItemNaoEncontradoException` e tratamento de entradas inválidas com `try-catch`.
+- **Gerenciamento de Recursos**: Utilização de `try-with-resources` para manipulação do `Scanner`.
 - **Modularização**: Organização estruturada em pacotes para separação de responsabilidades.
 - **Pattern Matching**: Uso de sintaxe moderna do Java para verificação e casting de tipos.
-- **Tratamento de Exceções & Generics**: (Em implementação) Para maior robustez e flexibilidade do código.
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **Linguagem**: Java
-- **IDE**: IntelliJ IDEA
+- **IDE**: IntelliJ IDEA / VS Code
 
 ## 📁 Estrutura do Projeto
 
@@ -26,3 +28,16 @@ O projeto implementa e demonstra os seguintes pilares de desenvolvimento:
 - `inimigo`: Definições e comportamentos dos adversários.
 - `item`: Sistema de itens, armas e poções.
 - `missao`: Controle de estados e objetivos do jogo.
+- `inventario`: Implementação genérica de armazenamento de itens.
+- `jogoaventura`: Gerenciamento do mundo e entidades.
+
+## 🎮 Como Executar
+
+1. Compile o projeto:
+   ```bash
+   javac -d bin src/**/*.java
+   ```
+2. Execute a classe principal:
+   ```bash
+   java -cp bin Main
+   ```
