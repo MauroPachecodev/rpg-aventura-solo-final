@@ -24,7 +24,16 @@ public class Missao {
         return this.titulo;
     }
 
+    public EstadoMissao getEstado() {
+        return this.estadoMissao;
+    }
+
+    public Inimigo getAlvo() {
+        return this.alvo;
+    }
+    
     public void concluir(Personagem personagem) {
+
         estadoMissao = EstadoMissao.CONCLUIDA;
         personagem.receberOuro(ouroRecompensa);
         personagem.adicionarItem(recompensa);

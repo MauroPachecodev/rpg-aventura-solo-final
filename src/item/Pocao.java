@@ -1,9 +1,11 @@
 package item;
+
 import personagem.Personagem;
-public class Pocao extends Item implements Usavel{
+
+public class Pocao extends Item implements Usavel {
 
     public Pocao(String nome, String tipo, int cura) {
-      super(nome, tipo, cura);
+        super(nome, tipo, cura);
     }
 
     @Override

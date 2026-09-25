@@ -1,4 +1,5 @@
 package inimigo;
+
 import personagem.Personagem;
 
 public abstract class Inimigo {
@@ -15,22 +16,27 @@ public abstract class Inimigo {
     }
 
     public void receberDano(int dano) {
-        if (vida > 0){
+        if (vida > 0) {
             vida = Math.max(vida - dano, 0);
         }
     }
 
-    public String mostrarNome(){
+    public String mostrarNome() {
         return this.nome;
     }
 
-    public int mostrarDano(){
+    public int mostrarDano() {
         return this.dano;
     }
 
     public abstract void atacar(Personagem personagem);
 
+    public int mostrarVida() {
+        return this.vida;
+    }
+
     public boolean estaVivo() {
         return vida > 0;
     }
 }
+
